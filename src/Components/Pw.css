@@ -1,1 +1,15 @@
 
+h1{
+    text-align: center;
+}
+.passwordContainer{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.generatedPassword{
+    width: 90%;
+    height: 1.5rem;
+    background-color: #f3f3f3;
+    border: 1px solid black;
+}
