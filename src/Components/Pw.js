@@ -52,13 +52,20 @@ const Pw =()=>{
             for(let i=0; i<passwordLength; i++){
                 newPw += charSet[Math.floor(Math.random()*charSet.length)]
             }
-            setRequiredPassword(newPw)
+            setRequiredPassword(newPw);
+
         }   
     }
-    
-
-    
-
+    // let copyBtn = document.getElementById('copyBtn');
+       const copyPassword=()=>{
+        var div = document.getElementById('generatedPassword');
+            var range = document.createRange();
+            range.selectNode(div);
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('Text copied to clipboard: ' + div.innerText);
+    }
 
     return(
         <>
@@ -66,7 +73,7 @@ const Pw =()=>{
 
         <div className="passwordContainer">
             <div className='generatedPassword' id='generatedPassword'>{requiredPassword}</div>
-            <button>Copy Password</button>
+            <button id='copyBtn' className='copyBtn' onClick={copyPassword}>Copy Password</button>
         </div>
 
         <div className="specifications">
@@ -86,7 +93,7 @@ const Pw =()=>{
                 <input type="checkbox" name="symb" id="symb" onChange={handleSymbol} checked={symb} />
                 <label htmlFor="symb">Include symbols</label>
                 <br />
-                <button onClick={generatePassword} >Generate Password</button>
+                <button className='pwBtn' onClick={generatePassword} >Generate Password</button>
             </div>
         </div>
 

@@ -13,3 +13,17 @@ h1{
     background-color: #f3f3f3;
     border: 1px solid black;
 }
+.pwBtn{
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 8px;
+}
+.copyBtn{
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 8px;
+}
